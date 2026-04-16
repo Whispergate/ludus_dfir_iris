@@ -58,7 +58,7 @@
     src: env.j2
     dest: "{{ ludus_dfir_iris_install_path }}/.env"
     mode: "0600"
-  notify: Restart DFIR-IRIS
+  register: iris_env
 
 - name: Pull DFIR-IRIS Docker images
   ansible.builtin.shell: docker compose pull
@@ -66,7 +66,7 @@
     chdir: "{{ ludus_dfir_iris_install_path }}"
 
 - name: Start DFIR-IRIS
-  ansible.builtin.shell: docker compose up -d
+  ansible.builtin.shell: docker compose up -d {{ '--force-recreate' if iris_env.changed else '' }}
   args:
     chdir: "{{ ludus_dfir_iris_install_path }}"
 

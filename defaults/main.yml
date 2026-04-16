@@ -5,6 +5,13 @@ ludus_dfir_iris_version: "v2.4.20"
 # Network port for the HTTPS interface
 ludus_dfir_iris_https_port: 443
 
+# nginx server_name (FQDN or IP served by the reverse proxy)
+ludus_dfir_iris_server_name: "iris.local"
+
+# TLS cert/key filenames (shipped in the nginx image by default; override if mounting your own)
+ludus_dfir_iris_key_filename: "iris_dev_key.pem"
+ludus_dfir_iris_cert_filename: "iris_dev_cert.pem"
+
 # Admin password (set on first boot; if empty, auto-generated and printed in logs)
 ludus_dfir_iris_admin_password: "admin"
 

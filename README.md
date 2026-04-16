@@ -15,6 +15,9 @@ DFIR-IRIS is a collaborative digital forensics and incident response platform.
 |---|---|---|
 | `ludus_dfir_iris_version` | `v2.4.20` | DFIR-IRIS release tag |
 | `ludus_dfir_iris_https_port` | `443` | HTTPS port for the web interface |
+| `ludus_dfir_iris_server_name` | `iris.local` | nginx `server_name` (FQDN or IP) |
+| `ludus_dfir_iris_key_filename` | `iris_dev_key.pem` | TLS key filename inside the nginx image |
+| `ludus_dfir_iris_cert_filename` | `iris_dev_cert.pem` | TLS cert filename inside the nginx image |
 | `ludus_dfir_iris_admin_password` | `admin` | Admin password (set on first boot) |
 | `ludus_dfir_iris_postgres_password` | `iris_db_password` | PostgreSQL database password |
 | `ludus_dfir_iris_postgres_admin_password` | `iris_db_admin_password` | PostgreSQL admin password |
