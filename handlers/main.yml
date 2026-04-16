@@ -1,0 +1,6 @@
+---
+- name: Restart DFIR-IRIS
+  ansible.builtin.shell: |
+    cd {{ ludus_dfir_iris_install_path }} && docker compose down && docker compose up -d
+  args:
+    chdir: "{{ ludus_dfir_iris_install_path }}"

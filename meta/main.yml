@@ -1,0 +1,28 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: ludus_dfir_iris
+  author: Whispergate
+  description: "An Ansible Role that installs DFIR-IRIS on a Debian/Ubuntu host for Ludus"
+  company: ""
+  license: MIT
+  min_ansible_version: "2.10"
+  platforms:
+    - name: Debian
+      versions:
+        - bullseye
+        - bookworm
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
+  galaxy_tags:
+    - dfir
+    - iris
+    - forensics
+    - incidentresponse
+    - security
+    - docker
+
+collections: []

@@ -1,0 +1,23 @@
+---
+# DFIR-IRIS version (git tag to checkout)
+ludus_dfir_iris_version: "v2.4.20"
+
+# Network port for the HTTPS interface
+ludus_dfir_iris_https_port: 443
+
+# Admin password (set on first boot; if empty, auto-generated and printed in logs)
+ludus_dfir_iris_admin_password: "admin"
+
+# Database passwords
+ludus_dfir_iris_postgres_password: "iris_db_password"
+ludus_dfir_iris_postgres_admin_password: "iris_db_admin_password"
+
+# Secret key and password salt for the web app
+ludus_dfir_iris_secret_key: "iris_secret_key_change_me"
+ludus_dfir_iris_security_password_salt: "iris_salt_change_me"
+
+# Install path
+ludus_dfir_iris_install_path: "/opt/iris-web"
+
+# Authentication type: local, ldap, or oidc
+ludus_dfir_iris_auth_type: "local"
